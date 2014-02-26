@@ -10,9 +10,10 @@ def calculate_total(orders)
      total += order[:quantity] * order[:unit_price]
   end
   total+= total* TAX_RATE
-  total.round(2)
+  "$%.2f" % total.round(2)
 end
+
 #puts calculate_total(orders1)
-puts "$%.2f" % calculate_total(empty_order)
-puts "$%.2f" % calculate_total(orders1)
-puts "$%.2f" % calculate_total(orders2)
+#puts "$%.2f" % calculate_total(empty_order)
+#puts "$%.2f" % calculate_total(orders1)
+#puts "$%.2f" % calculate_total(orders2)
